@@ -10,6 +10,10 @@ img {
     border: solid #fff;
 }
 
+/*make donate button invisible*/
+#donate #hide_me{
+   display: none;
+}
 
 
 
