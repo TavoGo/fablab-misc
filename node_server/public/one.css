@@ -10,9 +10,22 @@ img {
     border: solid #fff;
 }
 
+input {
+    width: auto;
+}
+
+#money_input{
+    width: 25ch;
+}
+
+.hidden {
+    display: none;
+}
+
 /*make donate button invisible*/
-#donate #hide_me{
+#donate {
    display: none;
+   width: auto;
 }
 
 

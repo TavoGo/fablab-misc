@@ -25,10 +25,14 @@
     <a href="https://www.savetheelephants.org/">Send some Love</a>
 
     <button id="alert" type="button">Touch Me</button>
-    <div id="hide_me">
+
+    <div>
       <!--make this button invisible using css, until press alert button-->
-      <button id="donate" hidden>Donate</button>
+      <button id="donate">Donate</button>
       <div id="money">
+        <input id="moneyInput" placeholder="Give money to the elephants!" hidden>
+        <button id="submit" hidden>Submit</button>
+        <p id="message" hidden></p>
       </div>
     </div>
     <script src="one.js"></script>
