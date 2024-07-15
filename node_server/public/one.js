@@ -22,7 +22,9 @@ alertButton.addEventListener("click", myFunction);
 //Pressing Donate Button will bring up input box to put money in
 //make sure only occurs once
 
-const moneyInput = document.getElementById("moneyInput")
+var moneyInput = document.getElementById("moneyInput");
+var moneyInputt = moneyInput.value.trim();
+var message = document.getElementById("message");
 
 //bring up input by pressing donate button. There is very little in HTML, mostly JS
 donateButton.addEventListener(
@@ -40,26 +42,29 @@ moneyInput.style.width = moneyInput.placeholder.length + 1 + 'ch'
 //now put in some value in input box bring out thank note with happy elephant
 //add submit button
 const submit_button = document.getElementById("submit");
+
 //submit_button will appear once input money amount
 function appearFunc() {
   submit_button.removeAttribute("hidden");
 }
-//submit button will appear once an input is put into box
 moneyInput.addEventListener("input", appearFunc);
 
+//Now Press Submit Button
 
 // Function to display message on submit
-var inputValue = moneyInput.value.trim();
-const message = document.getElementById("message");
+
 
 //reset input value on page reload
 window.addEventListener('load', () => {
+    sessionStorage.clear();
     moneyInput.value='';
+    moneyInputt.value='';
+    message.textContent='';
 });
 
 function displayMessage() {
-if (inputValue !== '') {
-    message.textContent = `The elephants thank you for your ${inputValue} donation`;
+if (moneyInputt !== '') {
+    message.textContent = `The elephants thank you for your ${moneyInputt} donation`; //make sure statement is in `` quotes
     message.removeAttribute('hidden');
 }
 else {
@@ -69,6 +74,20 @@ else {
 
 const submit= document.getElementById('submit');
 submit.addEventListener('click', displayMessage);
+
+
+//Test submit 2
+var inputTest = document.getElementById('inputTest').value;
+var submit2 = document.getElementById('submit2');
+var message2 = document.getElementById('message2');
+
+submit2.addEventListener('click', () => {
+  message2.textContent= `${inputTest}`;
+})
+
+//*********************** */
+//To Do
+//fix input box refresh--likely in $GET or $POST
 
 //**************Garbage***************
 //Create Input Box with JS. Will incorporate various elements. Create new element from scratch with text

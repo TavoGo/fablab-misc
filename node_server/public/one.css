@@ -18,6 +18,7 @@ input {
     width: 25ch;
 }
 
+/*can use classList in JS to change css*/
 .hidden {
     display: none;
 }
