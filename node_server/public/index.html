@@ -3,13 +3,14 @@
   <header>
     <meta charset="UTF-8" />
     <meta lang="EN" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./one.css" />
     <style>
       /* can add css styles here or link above */
     </style>
     <title>My Simple WebPage</title>
   </header>
+
 
   <body>
     <h1>Hello World and Sun and Pluto</h1>
@@ -23,6 +24,25 @@
       />
     </div>
     <a href="https://www.savetheelephants.org/">Send some Love</a>
+
+    <button id="alert" type="button">Touch Me</button>
+
+    <div>
+
+      <!--make this button invisible using css, until press alert button-->
+      <button id="donate">Donate</button>
+      <div id="money">
+        <input id="moneyInput" placeholder="Give money to the elephants!" hidden>
+        <button id="submit" hidden>Submit</button>
+        <p id="message" hidden></p>
+
+        <input id="inputTest" placeholder="Some Value">
+        <button id="submit2">Submit2</button>
+        <p id="message2"></p>
+      </div>
+    </div>
+
+    <script src="one.js"></script>
 
     <button id="alert" type="button">Touch Me</button>
 

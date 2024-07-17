@@ -10,6 +10,24 @@ img {
     border: solid #fff;
 }
 
+input {
+    width: auto;
+}
+
+#money_input{
+    width: 25ch;
+}
+
+/*can use classList in JS to change css*/
+.hidden {
+    display: none;
+}
+
+/*make donate button invisible*/
+#donate {
+   display: none;
+   width: auto;
+}
 
 
 
